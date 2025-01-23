@@ -25,6 +25,9 @@ public void openLinkTestPage(){
       driver.navigate().back();
 
       //(02)Find my destination
+      WebElement wheretoGo = driver.findElement(By.partialLinkText("Find the URL"));
+      String path = wheretoGo.getAttribute("href");
+      System.out.println("This link is going to : " + path);
 
 
 
