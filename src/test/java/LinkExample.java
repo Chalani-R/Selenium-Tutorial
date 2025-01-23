@@ -14,10 +14,8 @@ public class LinkExample{
 @BeforeMethod
 public void openLinkTestPage(){
    driver = new ChromeDriver();
-
    driver.manage().window().maximize();
    driver.get("https://www.leafground.com/link.xhtml");
-
 }
    @Test
    public void LinkTests() {
