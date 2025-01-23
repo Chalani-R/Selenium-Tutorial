@@ -5,8 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-//check the update
 import java.util.List;
 
 public class LinkExample{
@@ -60,15 +58,6 @@ public void openLinkTestPage(){
       WebElement layoutElemnt = driver.findElement(By.className("layout-main-content"));
       List<WebElement> countOfLayoutLinks =  layoutElemnt.findElements(By.tagName("a"));
       System.out.println("Count of layout links : " + countOfLayoutLinks.size());
-
-
-
-
-
-
-
-
-
 
    }
 }
