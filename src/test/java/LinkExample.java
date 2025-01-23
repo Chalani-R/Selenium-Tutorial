@@ -45,7 +45,19 @@ public void openLinkTestPage(){
       driver.navigate().back();// nawatha navigate mul thanatama navigate wenwta dnne
 
       //(04)Dublicate Link
+      homeLink = driver.findElement(By.linkText("Go to Dashboard")); // Re-locate after navigation
+      homeLink.click();
+      driver.navigate().back();
 
+      //(05)Count page List(test didint pass)
+      List<WebElement> countfullpageLinks = driver.findElements(By.tagName("a"));
+      int pageLinkCount = countfullpageLinks.size();
+      System.out.println("Count of full page links : " + pageLinkCount);
+
+      //(06) count layout links
+      WebElement layoutElemnt = driver.findElement(By.className("layout-main-content"));
+      List<WebElement> countOfLayoutLinks =  layoutElemnt.findElements(By.tagName("a"));
+      System.out.println("Count of layout links : " + countOfLayoutLinks.size());
 
 
 
