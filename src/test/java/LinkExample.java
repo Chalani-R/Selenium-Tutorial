@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class LinkExample{
 
    WebDriver driver;
@@ -18,7 +20,7 @@ public void openLinkTestPage(){
 
 }
    @Test
-   public void LinkTests(){
+   public void LinkTests() {
       //01)Take me to dashboard
       WebElement homeLink = driver.findElement(By.linkText("Go to Dashboard"));
       homeLink.click();
@@ -30,8 +32,19 @@ public void openLinkTestPage(){
       System.out.println("This link is going to : " + path);
 
 
+      //(03)Am I broken link?
+      WebElement brokenLink = driver.findElement(By.linkText("Broken?"));
+      brokenLink.click();
 
+      String title = driver.getTitle();
+      if (title.contains("404")) {
+         System.out.println("The link is broken");
+      } else {
+         System.out.println("Not broken");
+      }
+      driver.navigate().back();// nawatha navigate mul thanatama navigate wenwta dnne
 
+      //(04)Dublicate Link
 
 
 
