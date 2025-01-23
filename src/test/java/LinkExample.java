@@ -24,6 +24,9 @@ public void openLinkTestPage(){
       homeLink.click();
       driver.navigate().back();
 
+      //(02)Find my destination
+
+
 
 
 
