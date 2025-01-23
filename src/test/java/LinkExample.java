@@ -45,8 +45,8 @@ public void openLinkTestPage(){
       driver.navigate().back();// nawatha navigate mul thanatama navigate wenwta dnne
 
       //(04)Dublicate Link
-      homeLink = driver.findElement(By.linkText("Go to Dashboard")); // Re-locate after navigation
-      homeLink.click();
+      WebElement homeLink1 = driver.findElement(By.linkText("Go to Dashboard")); // Re-locate after navigation
+      homeLink1.click();
       driver.navigate().back();
 
       //(05)Count page List(test didint pass)
